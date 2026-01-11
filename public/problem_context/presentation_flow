@@ -1,0 +1,50 @@
+Project Pitch Outline: Transforming MyPick Pvt. Ltd.
+
+Team of 6 folks presenting the solution
+
+Phase 1: Framing & Exploratory Data Analysis (EDA) — [15 Marks]
+Business Problem Definition: Clearly state the goal—transforming MyPick from a "sleepy" family business to a competitive, data-driven organization.
+Objective Setting: Address how the analysis will identify the best store types, locations, and sales promotions to drive growth.
+Data Audit & Cleaning:
+Review Sales Data and Brand Ratings for typos or missing values.
+Document all data sanitization steps (maintain original data for reproducibility).
+Initial Hypotheses: Frame specific hypotheses regarding brand perception versus the "Ideal" brand and the impact of the two promotion types.
+Visualization: Use charts (referencing Anscombe’s Quartet) to identify patterns that summary statistics might miss.
+
+
+Phase 2: Quantitative Modeling & Evaluation — [40 Marks]
+Technique Selection: Choose appropriate models for sales prediction (Regression) and brand perception (Multidimensional Scaling/MDS).
+Rigorous Testing of Assumptions:
+Explicitly list all underlying assumptions made for each model.
+Test these assumptions (e.g., normality, homoscedasticity) and document the results.
+Evaluation of Alternative Models: To achieve a 5-star rating, do not just present one model. Compare at least two modeling approaches and justify why the chosen one is superior.
+Model Validation: Detail the steps taken to validate the model's predictive power or fit (e.g., R-squared, stress values in MDS).
+
+Phase 3: Interpreting Insights & Marketing Strategy — [20 Marks]
+Perceptual Mapping:
+Analyze how MyPick is positioned relative to competitors (Priya, Ruchi, MDH, etc.) and the "Ideal" brand.
+Specific Task: Evaluate if using the mean of customer ratings provides a reasonably accurate map or if it obscures segment differences.
+Market Segmentation:
+Determine if it is "meaningful" to segment the market based on perceptions.
+If segments exist, analyze them separately as requested by Rao.
+Evidence-Based Recommendations:
+Identify the specific store type and location to focus on.
+Identify which of the two types of sales promotions is most effective.
+
+Phase 4: Presentation, Defense, & Technical Handover — [25 Marks]
+The Pitch (30 Mins):
+Context (5 Mins): Business problem and EDA overview.
+Modeling (12 Mins): Deep dive into assumptions, alternatives, and validation.
+Insights (10 Mins): Hypothesis validation and Perceptual Map.
+Wrap-up (5 Mins): Near-term and long-term strategy.
+Technical Defense: Each team member must be ready to defend the theoretical basis of the techniques used and the conclusions drawn.
+Reproducibility Package: Prepare the following for submission:
+Recast/reprocessed data.
+JASP output, Excel files, and any scripts used.
+Future Research: Conclude by identifying limitations of the current data and specifying exactly what other data Rao should collect in the future to improve analysis.
+Team Assignment Summary
+Member 1 (Lead): Framing, Context, and Wrap-up (Strategy/Action Plan).
+Member 2 & 3 (Quants): Quantitative Modeling, Assumption Testing, and Model Validation.
+Member 4 & 5 (Analysts): Interpretation, Perceptual Mapping, and Hypothesis Validation.
+
+Analogy for the Team: Building this dissertation is like testifying as an expert witness in court. It isn't enough to just give your "opinion" (the insight); you must prove your "forensics" (the data cleaning) were untainted, show that you followed "legal procedure" (statistical assumptions), and be prepared to explain why "alternative theories" (other models) were rejected under cross-examination.

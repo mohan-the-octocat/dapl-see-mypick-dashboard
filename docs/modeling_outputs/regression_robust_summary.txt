@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  Sales   R-squared:                       0.892
+Model:                            OLS   Adj. R-squared:                  0.887
+Method:                 Least Squares   F-statistic:                     133.1
+Date:                Sat, 10 Jan 2026   Prob (F-statistic):           4.99e-34
+Time:                        16:53:51   Log-Likelihood:                -359.12
+No. Observations:                  83   AIC:                             728.2
+Df Residuals:                      78   BIC:                             740.3
+Df Model:                           4                                         
+Covariance Type:                  HC3                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+Intercept            81.1367      5.717     14.193      0.000      69.932      92.341
+C(Location)[T.RA]   103.1188      5.229     19.721      0.000      92.870     113.367
+C(Type)[T.PRV]        3.9985      4.093      0.977      0.329      -4.023      12.020
+SPDisc                1.8856      0.693      2.721      0.007       0.527       3.244
+SPMore                0.4270      0.788      0.542      0.588      -1.116       1.971
+==============================================================================
+Omnibus:                        2.719   Durbin-Watson:                   2.236
+Prob(Omnibus):                  0.257   Jarque-Bera (JB):                2.051
+Skew:                           0.253   Prob(JB):                        0.359
+Kurtosis:                       3.581   Cond. No.                         28.5
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)

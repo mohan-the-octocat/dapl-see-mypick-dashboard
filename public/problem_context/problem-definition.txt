@@ -1,0 +1,56 @@
+Decision Analysis for Product 
+Leaders External Assessment Caselet 
+Promax: Pitching to MyPick Pvt. Ltd. 
+
+Promax 
+Judging by the hum of activity at the unpretentious office of Promax, a startup offering product marketing consulting services, one may have been forgiven for thinking the time was noon rather than midnight - on Friday. 
+The three partners Amit Bhat, Deepak Kumar and Suneela G. - all recent graduates from a management school of repute - were poring over a brief they had received last week from a prospective client, but which for one reason or another they could not attend to till now. Promax was hoping to bag a contract to provide marketing analytics and support services to this prospect – and they were to make the pitch the next Monday evening. The importance of winning the contract could not be overstated: failure would set them back many months. 
+MyPick Pvt. Ltd. 
+The company Promax was hoping to win over was a medium sized family business making pickles and condiments. While the company had been set up over three decades ago, the next generation had recently taken charge. The new MD, Rao, was looking to increase sales growth, and was determined to use data and analytics to drive the company to achieve this. 
+He had in the past month, spoken to, and shortlisted, three consulting firms. Rao had told them that he would partner one of them for the next three years – assuming of course, that they would measure up – to transform MyPick from a sleepy organization to one that would make established competitors sit up and take notice. 
+The brief 
+Rao had, to help him finalise the choice of a consulting partner, sent Promax and their two rivals, data on annual sales of MyPick products for a randomly selected sample of stores that stocked MyPick, together with the amount of money spent on two types of sales promotion at each store. 
+
+Decision Analysis for Product 
+Leaders External Assessment Caselet 
+In addition, Rao had had a random survey done of the perceptions of a sample of consumers, to discover how they perceived MyPick relative to five main competitors – and an imagined “Ideal” brand. Their perceptions were ratings on a 1 to 7-point Likert type scale that asked how similar brands – shown in pairs – were. A rating of 7 meant that they were perceived to be identical, while a score of 1 indicated that they were perceived to be very different. 
+MyPick believed the following brands were their main rivals: 
+• Priya 
+• Ruchi 
+• MDH 
+• Mother’s Recipe 
+• Nolin’s 
+MyPick had sent out these data in the file “EA –Group#.xlsx” (where # indicates the number of the contender). 
+The file comprised five sheets: 
+1. SalesData: Data, including sales on a sample of stores stocking 
+MyPick 2. SalesDataKey: A description of the variables in sheet 
+SalesData 
+3. BrandRatings: Scores of a sample of customers on overall similarity of brand pairs 4. BrandCodes: Description of brands for which ratings collected 
+5. Brand Message: Rao’s understanding of the main messages rival brands were communicating to the market: their brand essence 
+The task for each of the three shortlisted consulting firms was to analyse the data and tell MyPick what they could make of the data, and what they would advise him to do for the forthcoming year based on their insights from the analysis. 
+“This exercise will help me assess your understanding of the analysis process”, Rao had said at the meeting he last had with the consultants. “The data sets are limited, but your approach to, and choice of, techniques; the care with which you build models – including understanding data, testing model assumptions, validating models; your ability to interpret what you see; and the quality of your recommendations – for both marketing action and future research – will determine which of you three will work with us. 
+“In addition to anything else you may wish to tell me, I’d like to know which type of store, preferred store location, and which types of sales promotion I should consider focusing on next year. 
+“Please also tell me if, and what kind of, an opportunity exists to position our brand so as to differentiate ourselves from the competition and move as close to the customer’s “ideal” brand, as possible. Tell me if you think it is meaningful to segment the market based on customers’ perceptions of our brand; if you do, please analyse each segment separately. Give me your thoughts on whether a mean of the ratings of customers within each such segment will make a reasonably accurate perceptual map.
+IPL Bangalore Page 2 of 4 
+Decision Analysis for Product 
+Leaders External Assessment Caselet 
+“And oh yes,” he had added. “Given this limited data, you may find that any models you build may not meet all the assumptions underlying the techniques you use to build them. Never mind – I want to see what assumptions you make to get the job done, and how you evaluate alternate models. Just pick the best you come up with, and use it to draw insights MyPick might use. 
+“And finally,” Rao concluded, “let me know what other data would have helped you improve your analysis. Perhaps we can plan to get such data in future.” 
+Crafting the pitch 
+“Well,” said Amit. “We all know how the MD can be an annoying stickler for detail and rigour. We’d better make sure we cover every little detail.” 
+“I take that as an opportunity”, said Suneela. “After all, he’s going to pick a consulting partner based mainly on this final interaction. If we can show that we know what we’re doing, then we’re bound to score over the competition.” 
+“Right,” added Deepak. “Let’s start with exploratory data analysis, and get a broad feel for the data. Given the hurry with which MyPick has collected and sent us the data, I won’t be surprised if there are typos we may need to address. We’ll make sure, of course, that we retain the original data so that analyses can be redone if needed, if Rao doesn’t agree with our data cleaning.” 
+“Good idea.” This from Suneela. “But before that, shouldn’t we first frame the several business problems MyPick has at hand, and figure out what we need, to address those problems? Don’t forget, MyPick has asked for recommendations for future research too.” 
+“Absolutely right! Perhaps we can come up with useful hypotheses that additional research can test, and which we can use to recommend strategy and action. And the more work we can suggest, the better for us,” replied Deepak, adding hastily, “work that will help our client, of course.” 
+“Ok. Also, let’s make copious use of charts. I’ve heard that the MD loves visualizing numbers,” said Suneela. And as an afterthought, “It will be helpful to us too – remember Anscombe’s quartet from our DAPL course?” 
+“Another suggestion I have,” said Amit, “is that we look for natural groups in the data. The bases for grouping data may be different, and how we conduct an analysis for any grouping we may find could vary, but let’s keep this point in mind.” 
+“Yes, that’s key,” agreed Deepak. “Let’s split the analyses so that we each do at least one. You look at the survey data on customer ratings for brand similarity, Deepak and Suneela, while I take care of the sales data. Let’s plan to put this together by lunch time for a final review tomorrow, and send it to MyPick as requested, by evening. 
+“Oh, I just remembered – MyPick has asked us to should submit along with the
+presentation slides, recast/reprocessed data if any, as well as JASP (or any other 
+IPL Bangalore Page 3 of 4 
+Decision Analysis for Product 
+Leaders External Assessment Caselet 
+statistical software) output, Excel and/or scripts used for data analysis, so that what we have done can be reviewed and reproduced.” 
+Date Promax to submit work to Rao, MD, MyPick: One day before the meet (TBD by IPL) Time for presentation: 30 minutes 
+Time for discussion: 10 minutes
+IPL Bangalore Page 4 of 4

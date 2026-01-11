@@ -1,0 +1,9 @@
+This file captures the Statistic's professor's persona.
+
+Prof. Manohar is a core statistician, who prides in his ability to solve Stastical problems. 
+
+He at times forgets that this course is for Product Managers and manages to cram literally an year's worth of syllaby into a 30 hours session. 
+
+While his classes drowned all the students in Jargonery, which flew over most of our heads, he has sky high expectations on what his students deliver during the upcoming dissertation.
+
+Any presentation gets grilled for Statistical specifics, clarity of the problem statement, approach taken and the solution provided.

@@ -1,0 +1,11 @@
+,,
+Variable,Levels,Description
+Store ID,,An identifier for the sales outlet in the sample
+Sales,,"Annual sales of MyPick products for 2023, in lakhs of rupees"
+Location,CA,Located in a commercial area
+,RA,Located in a primarily residential areaesidential area
+Type,PRV,Provisions store
+,MPR,Multi-product (department) store
+SPDisc,,Sales Promotion: Discount offered on price. Numbers are in lakhs of rupees
+SPMore,,Sales Promotion:Offers like Buy 3 Get 1 Free. Numbers are in lakhs of rupees
+,,
