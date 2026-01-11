@@ -145,26 +145,26 @@ const Phase1 = () => (
     </div>
 
     {/* 1.3 Hypotheses */}
-    <Card className="p-10 border-l-8 border-l-indigo-600 bg-slate-900 text-white shadow-2xl">
-        <h3 className="text-3xl font-black mb-8 flex items-center gap-4">
-            <FileText className="w-10 h-10 text-indigo-400"/> 1.3 Research Hypotheses
+    <Card className="p-10 border-l-8 border-l-indigo-600 bg-white shadow-xl">
+        <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-4">
+            <FileText className="w-10 h-10 text-indigo-600"/> 1.3 Research Hypotheses
         </h3>
         <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <span className="text-indigo-400 font-black text-xl mb-2 block">H1</span>
-                <p className="text-slate-300 leading-relaxed font-medium">"Buy-More" (Volume) promotions exhibit higher elasticity than "Discount" (Price).</p>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H1</span>
+                <p className="text-slate-700 leading-relaxed font-medium">"Buy-More" (Volume) promotions exhibit higher elasticity than "Discount" (Price).</p>
             </div>
-            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <span className="text-indigo-400 font-black text-xl mb-2 block">H2</span>
-                <p className="text-slate-300 leading-relaxed font-medium">MyPick is perceived as "Traditional" and is significantly distant from the "Ideal" brand.</p>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H2</span>
+                <p className="text-slate-700 leading-relaxed font-medium">MyPick is perceived as "Traditional" and is significantly distant from the "Ideal" brand.</p>
             </div>
-            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <span className="text-indigo-400 font-black text-xl mb-2 block">H3</span>
-                <p className="text-slate-300 leading-relaxed font-medium">The market is heterogeneous; Cluster Analysis will reveal distinct customer segments.</p>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H3</span>
+                <p className="text-slate-700 leading-relaxed font-medium">The market is heterogeneous; Cluster Analysis will reveal distinct customer segments.</p>
             </div>
-            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <span className="text-indigo-400 font-black text-xl mb-2 block">H4</span>
-                <p className="text-slate-300 leading-relaxed font-medium">Multi-Product/Commercial stores yield higher sales than Provision/Residential ones.</p>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H4</span>
+                <p className="text-slate-700 leading-relaxed font-medium">Multi-Product/Commercial stores yield higher sales than Provision/Residential ones.</p>
             </div>
         </div>
     </Card>
@@ -484,17 +484,26 @@ const Phase3 = () => {
           <Users className="w-5 h-5 text-purple-500"/> Market Segmentation (H3 Verified)
         </h3>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
-          <div className="p-3 bg-slate-50 rounded border border-slate-100">
-            <div className="font-bold text-slate-700 mb-1">Cluster 0: "Traditionalists"</div>
-            <p className="text-xs text-slate-500">Largest group. They view <strong>MDH as Ideal</strong>. Hard to convert.</p>
+          <div className="flex flex-col bg-slate-50 rounded-xl border border-slate-100 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Traditionalist" className="w-full h-32 object-cover opacity-80" />
+            <div className="p-4">
+              <div className="font-bold text-slate-700 mb-1">Cluster 0: "Traditionalists"</div>
+              <p className="text-xs text-slate-500">Largest group. They view <strong>MDH as Ideal</strong>. Hard to convert.</p>
+            </div>
           </div>
-          <div className="p-3 bg-blue-50 rounded border border-blue-100">
-            <div className="font-bold text-blue-800 mb-1">Cluster 1: "The Believers"</div>
-            <p className="text-xs text-blue-600">High-value niche. <strong>MyPick is Ideal</strong>. Retain & Clone.</p>
+          <div className="flex flex-col bg-blue-50 rounded-xl border border-blue-100 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop" alt="Believer" className="w-full h-32 object-cover opacity-80" />
+            <div className="p-4">
+              <div className="font-bold text-blue-800 mb-1">Cluster 1: "The Believers"</div>
+              <p className="text-xs text-blue-600">High-value niche. <strong>MyPick is Ideal</strong>. Retain & Clone.</p>
+            </div>
           </div>
-          <div className="p-3 bg-green-50 rounded border border-green-100">
-            <div className="font-bold text-green-800 mb-1">Cluster 2: "The Opportunity"</div>
-            <p className="text-xs text-green-600">They rate MDH poorly. The "Gap" in the market. <strong>Prime Target</strong>.</p>
+          <div className="flex flex-col bg-green-50 rounded-xl border border-green-100 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop" alt="Opportunity" className="w-full h-32 object-cover opacity-80" />
+            <div className="p-4">
+              <div className="font-bold text-green-800 mb-1">Cluster 2: "The Opportunity"</div>
+              <p className="text-xs text-green-600">They rate MDH poorly. The "Gap" in the market. <strong>Prime Target</strong>.</p>
+            </div>
           </div>
         </div>
         <div className="mt-4 flex items-center gap-2 text-xs text-slate-400 font-mono border-t border-slate-100 pt-3">
