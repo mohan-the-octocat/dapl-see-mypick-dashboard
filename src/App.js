@@ -96,7 +96,10 @@ const AccordionItem = ({ title, subtitle, status, children, isOpen, onClick }) =
 );
 
 // --- Phase 1: Framing & EDA ---
-const Phase1 = () => (
+const Phase1 = () => {
+  const [activeFinding, setActiveFinding] = useState('sales');
+
+  return (
   <div className="space-y-12 animate-in fade-in duration-500">
     <div>
       <h2 className="text-3xl font-black text-slate-900 tracking-tight uppercase">Phase 1: Framing & Forensics</h2>
@@ -175,15 +178,18 @@ const Phase1 = () => (
     </Card>
 
     {/* 1.2 EDA */}
-    <div className="space-y-10">
+    <div className="space-y-6">
         <h3 className="text-3xl font-black text-slate-900">1.2 Forensic Findings (EDA)</h3>
         
-        {/* Sales Data */}
-        <Card className="p-10 shadow-xl border-2 border-slate-100">
-            <h4 className="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3">
-                <BarChart2 className="w-8 h-8 text-blue-600"/> Evidence A: Sales Data Forensic Audit
-            </h4>
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Sales Data Accordion */}
+        <AccordionItem
+          title="Evidence A: Sales Data Forensic Audit"
+          subtitle="Distribution Analysis & Outlier Detection"
+          status="PASSED"
+          isOpen={activeFinding === 'sales'}
+          onClick={() => setActiveFinding(activeFinding === 'sales' ? null : 'sales')}
+        >
+            <div className="grid lg:grid-cols-2 gap-12 items-center p-4">
                 <div className="bg-slate-50 rounded-3xl p-8 flex justify-center border border-slate-100 shadow-inner">
                    <ZoomableImage src={`${ASSET_PATH}/univariate_distributions.png`} alt="Sales Distribution" className="h-80 md:h-96 w-full object-contain drop-shadow-2xl" />
                 </div>
@@ -208,64 +214,74 @@ const Phase1 = () => (
                     </div>
                 </div>
             </div>
-        </Card>
+        </AccordionItem>
 
-        {/* Brand Data */}
-        <div className="grid md:grid-cols-2 gap-8">
-             <Card className="p-8 shadow-lg border border-slate-100">
-                <h4 className="text-xl font-black text-slate-800 mb-6 flex items-center gap-3">
-                    <Users className="w-8 h-8 text-purple-600"/> Witness Credibility
-                </h4>
-                <div className="bg-slate-50 rounded-2xl p-6 mb-6 border border-slate-100 shadow-inner">
-                    <ZoomableImage src={`${ASSET_PATH}/respondent_variance.png`} alt="Variance analysis showing zero straight-liners" className="w-full h-64 object-contain" />
-                </div>
-                <p className="text-lg text-slate-600 leading-relaxed font-medium text-center">
-                    <strong>0 Straight-liners detected.</strong> High-quality, discriminative data confirmed.
-                </p>
-             </Card>
-
-             <Card className="p-8 shadow-lg border border-slate-100">
-                <h4 className="text-xl font-black text-slate-800 mb-6 flex items-center gap-3">
-                    <Target className="w-8 h-8 text-purple-600"/> The "Ideal" Gap (H2)
-                </h4>
-                <div className="bg-slate-50 rounded-2xl p-6 mb-6 border border-slate-100 shadow-inner">
-                    <ZoomableImage src={`${ASSET_PATH}/ideal_proximity_bar.png`} alt="Ideal Proximity Bar Chart" className="w-full h-64 object-contain" />
-                </div>
-                <p className="text-lg text-slate-600 leading-relaxed font-medium text-center">
-                    <strong>MDH (4.37)</strong> leads. MyPick (2.56) lags in the commodity cluster.
-                </p>
-             </Card>
-
-             <Card className="p-10 md:col-span-2 shadow-xl border-2 border-slate-100 overflow-hidden relative">
-                <div className="absolute top-0 right-0 p-8 opacity-5">
-                    <LayoutGrid className="w-64 h-64" />
-                </div>
-                <h4 className="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3">
-                    <LayoutGrid className="w-8 h-8 text-purple-600"/> Market Texture & Perception
-                </h4>
-                <div className="flex flex-col lg:flex-row gap-12 items-center relative z-10">
-                     <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-inner w-full lg:w-1/2">
-                        <ZoomableImage src={`${ASSET_PATH}/top_pairs_bar.png`} alt="Similarity analysis showing top brand pairs" className="h-72 w-full object-contain" />
+        {/* Brand Data Accordion */}
+        <AccordionItem
+          title="Evidence B: Brand Perception Audit"
+          subtitle="Respondent Quality & Market Texture"
+          status="PASSED"
+          isOpen={activeFinding === 'brand'}
+          onClick={() => setActiveFinding(activeFinding === 'brand' ? null : 'brand')}
+        >
+            <div className="space-y-8 p-4">
+                <div className="grid md:grid-cols-2 gap-8">
+                     <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 className="text-lg font-black text-slate-800 mb-4 flex items-center gap-3">
+                            <Users className="w-6 h-6 text-purple-600"/> Witness Credibility
+                        </h4>
+                        <div className="bg-white rounded-xl p-4 mb-4 border border-slate-100">
+                            <ZoomableImage src={`${ASSET_PATH}/respondent_variance.png`} alt="Variance analysis showing zero straight-liners" className="w-full h-48 object-contain" />
+                        </div>
+                        <p className="text-sm text-slate-600 leading-relaxed font-medium text-center">
+                            <strong>0 Straight-liners detected.</strong> High-quality, discriminative data confirmed.
+                        </p>
                      </div>
-                     <div className="w-full lg:w-1/2 space-y-6">
-                         <div className="inline-block px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-black uppercase tracking-widest mb-2">
-                            Critical Forensic Finding
-                         </div>
-                         <h5 className="text-4xl font-black text-slate-900 leading-tight">
-                            The "Commodity Trap"
-                         </h5>
-                         <p className="text-xl text-slate-600 leading-relaxed">
-                            High similarity (5.70) between <strong>MyPick and Ruchi</strong> confirms consumers perceive the brand as undifferentiated.
-                         </p>
-                         <div className="p-4 bg-purple-50 rounded-2xl border border-purple-100">
-                            <p className="text-purple-900 font-bold italic text-base">
-                                "Breaking this perception is the prerequisite for premiumization."
-                            </p>
-                         </div>
+
+                     <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                        <h4 className="text-lg font-black text-slate-800 mb-4 flex items-center gap-3">
+                            <Target className="w-6 h-6 text-purple-600"/> The "Ideal" Gap (H2)
+                        </h4>
+                        <div className="bg-white rounded-xl p-4 mb-4 border border-slate-100">
+                            <ZoomableImage src={`${ASSET_PATH}/ideal_proximity_bar.png`} alt="Ideal Proximity Bar Chart" className="w-full h-48 object-contain" />
+                        </div>
+                        <p className="text-sm text-slate-600 leading-relaxed font-medium text-center">
+                            <strong>MDH (4.37)</strong> leads. MyPick (2.56) lags in the commodity cluster.
+                        </p>
                      </div>
                 </div>
-             </Card>
-        </div>
+
+                <div className="p-8 bg-purple-50/30 rounded-3xl border-2 border-purple-100 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-8 opacity-5">
+                        <LayoutGrid className="w-64 h-64" />
+                    </div>
+                    <h4 className="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3 relative z-10">
+                        <LayoutGrid className="w-8 h-8 text-purple-600"/> Market Texture & Perception
+                    </h4>
+                    <div className="flex flex-col lg:flex-row gap-12 items-center relative z-10">
+                         <div className="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm w-full lg:w-1/2">
+                            <ZoomableImage src={`${ASSET_PATH}/top_pairs_bar.png`} alt="Similarity analysis showing top brand pairs" className="h-64 w-full object-contain" />
+                         </div>
+                         <div className="w-full lg:w-1/2 space-y-6">
+                             <div className="inline-block px-4 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-black uppercase tracking-widest mb-2">
+                                Critical Forensic Finding
+                             </div>
+                             <h5 className="text-3xl font-black text-slate-900 leading-tight">
+                                The "Commodity Trap"
+                             </h5>
+                             <p className="text-lg text-slate-600 leading-relaxed">
+                                High similarity (5.70) between <strong>MyPick and Ruchi</strong> confirms consumers perceive the brand as undifferentiated.
+                             </p>
+                             <div className="p-4 bg-white/50 rounded-2xl border border-purple-100">
+                                <p className="text-purple-900 font-bold italic text-base">
+                                    "Breaking this perception is the prerequisite for premiumization."
+                                </p>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </AccordionItem>
     </div>
 
     {/* 1.3 Hypotheses */}
@@ -323,7 +339,8 @@ const Phase1 = () => (
       </div>
     </Card>
   </div>
-);
+  );
+};
 
 // --- Phase 2: Modeling ---
 const Phase2 = () => {
