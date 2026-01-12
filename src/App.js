@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { 
   BarChart2, 
   Target, 
@@ -13,7 +14,6 @@ import {
   PieChart,
   LayoutGrid,
   AlertTriangle,
-  ArrowRight,
   X,
   Maximize2
 } from 'lucide-react';
@@ -656,6 +656,7 @@ export default function App() {
 
   return (
     <ImageContext.Provider value={{ openImage: (src, alt) => setModalImage({ src, alt }), closeImage: () => setModalImage(null) }}>
+      <Analytics />
       <div className="flex flex-col md:flex-row h-screen bg-slate-50 font-sans text-slate-900 overflow-hidden">
         {/* Sidebar */}
         <div className="w-full md:w-72 bg-white border-r border-slate-200 flex flex-col shrink-0 z-20">
