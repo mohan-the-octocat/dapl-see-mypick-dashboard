@@ -151,7 +151,7 @@ const Phase1 = () => (
                   { icon: <Map className="text-emerald-600"/>, label: "Brand Positioning", desc: "Closing the gap to the 'Ideal' brand" },
                   { icon: <Users className="text-purple-600"/>, label: "Market Segmentation", desc: "Unlocking hidden consumer clusters" }
                 ].map((obj, i) => (
-                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md">
+                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-lg hover:scale-105 cursor-default">
                     <div className="p-2 bg-white rounded-lg shadow-sm h-fit">{obj.icon}</div>
                     <div>
                       <div className="font-bold text-slate-800">{obj.label}</div>
@@ -168,7 +168,7 @@ const Phase1 = () => (
                   { icon: <Store className="text-orange-600"/>, label: "Location Optimization", desc: "Residential vs Commercial focus" },
                   { icon: <TrendingUp className="text-blue-600"/>, label: "Promotion Efficiency", desc: "Discount vs Volume ROI Audit" }
                 ].map((obj, i) => (
-                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md">
+                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-lg hover:scale-105 cursor-default">
                     <div className="p-2 bg-white rounded-lg shadow-sm h-fit">{obj.icon}</div>
                     <div>
                       <div className="font-bold text-slate-800">{obj.label}</div>
