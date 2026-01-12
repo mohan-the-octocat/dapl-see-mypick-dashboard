@@ -174,61 +174,6 @@ const Phase1 = () => (
       </div>
     </Card>
 
-    {/* 1.4 Data Limitations */}
-    <Card className="p-10 border-l-8 border-l-red-600 bg-red-50/20 shadow-xl relative overflow-hidden">
-      <div className="absolute top-0 right-0 p-8 opacity-10">
-          <AlertTriangle className="w-48 h-48 text-red-600" />
-      </div>
-      <div className="relative z-10">
-        <h3 className="text-3xl font-black text-red-900 mb-8">1.4 Data Limitations</h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
-            <div className="p-3 bg-red-100 rounded-xl">
-              <Search className="w-8 h-8 text-red-600" />
-            </div>
-            <div>
-              <h4 className="font-black text-red-900 text-lg">Snapshot Data constraints</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Cross-sectional data for 2023. Insights are powerful for the current state but lack longitudinal seasonality trends.</p>
-            </div>
-          </div>
-          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
-            <div className="p-3 bg-red-100 rounded-xl">
-              <BarChart2 className="w-8 h-8 text-red-600" />
-            </div>
-            <div>
-              <h4 className="font-black text-red-900 text-lg">Revenue-Focused Lens</h4>
-              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Maximizing <strong>Revenue</strong>, not Margin. Current dataset excludes COGS, directing our focus to top-line performance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Card>
-
-    {/* 1.3 Hypotheses */}
-    <Card className="p-10 border-l-8 border-l-indigo-600 bg-white shadow-xl">
-        <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-4">
-            <FileText className="w-10 h-10 text-indigo-600"/> 1.3 Research Hypotheses
-        </h3>
-        <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
-                <span className="text-indigo-600 font-black text-xl mb-2 block">H1</span>
-                <p className="text-slate-700 leading-relaxed font-medium">"Buy-More" (Volume) promotions exhibit higher elasticity than "Discount" (Price).</p>
-            </div>
-            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
-                <span className="text-indigo-600 font-black text-xl mb-2 block">H2</span>
-                <p className="text-slate-700 leading-relaxed font-medium">MyPick is perceived as "Traditional" and is significantly distant from the "Ideal" brand.</p>
-            </div>
-            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
-                <span className="text-indigo-600 font-black text-xl mb-2 block">H3</span>
-                <p className="text-slate-700 leading-relaxed font-medium">The market is heterogeneous; Cluster Analysis will reveal distinct customer segments.</p>
-            </div>
-            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
-                <span className="text-indigo-600 font-black text-xl mb-2 block">H4</span>
-                <p className="text-slate-700 leading-relaxed font-medium">Multi-Product/Commercial stores yield higher sales than Provision/Residential ones.</p>
-            </div>
-        </div>
-    </Card>
-
     {/* 1.2 EDA */}
     <div className="space-y-10">
         <h3 className="text-3xl font-black text-slate-900">1.2 Forensic Findings (EDA)</h3>
@@ -322,6 +267,61 @@ const Phase1 = () => (
              </Card>
         </div>
     </div>
+
+    {/* 1.3 Hypotheses */}
+    <Card className="p-10 border-l-8 border-l-indigo-600 bg-white shadow-xl">
+        <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-4">
+            <FileText className="w-10 h-10 text-indigo-600"/> 1.3 Research Hypotheses
+        </h3>
+        <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H1</span>
+                <p className="text-slate-700 leading-relaxed font-medium">"Buy-More" (Volume) promotions exhibit higher elasticity than "Discount" (Price).</p>
+            </div>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H2</span>
+                <p className="text-slate-700 leading-relaxed font-medium">MyPick is perceived as "Traditional" and is significantly distant from the "Ideal" brand.</p>
+            </div>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H3</span>
+                <p className="text-slate-700 leading-relaxed font-medium">The market is heterogeneous; Cluster Analysis will reveal distinct customer segments.</p>
+            </div>
+            <div className="p-6 bg-indigo-50/50 rounded-2xl border border-indigo-100 hover:bg-indigo-100/50 transition-colors">
+                <span className="text-indigo-600 font-black text-xl mb-2 block">H4</span>
+                <p className="text-slate-700 leading-relaxed font-medium">Multi-Product/Commercial stores yield higher sales than Provision/Residential ones.</p>
+            </div>
+        </div>
+    </Card>
+
+    {/* 1.4 Data Limitations */}
+    <Card className="p-10 border-l-8 border-l-red-600 bg-red-50/20 shadow-xl relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-8 opacity-10">
+          <AlertTriangle className="w-48 h-48 text-red-600" />
+      </div>
+      <div className="relative z-10">
+        <h3 className="text-3xl font-black text-red-900 mb-8">1.4 Data Limitations</h3>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
+            <div className="p-3 bg-red-100 rounded-xl">
+              <Search className="w-8 h-8 text-red-600" />
+            </div>
+            <div>
+              <h4 className="font-black text-red-900 text-lg">Snapshot Data constraints</h4>
+              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Cross-sectional data for 2023. Insights are powerful for the current state but lack longitudinal seasonality trends.</p>
+            </div>
+          </div>
+          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
+            <div className="p-3 bg-red-100 rounded-xl">
+              <BarChart2 className="w-8 h-8 text-red-600" />
+            </div>
+            <div>
+              <h4 className="font-black text-red-900 text-lg">Revenue-Focused Lens</h4>
+              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Maximizing <strong>Revenue</strong>, not Margin. Current dataset excludes COGS, directing our focus to top-line performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Card>
   </div>
 );
 
