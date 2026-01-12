@@ -99,50 +99,119 @@ const AccordionItem = ({ title, subtitle, status, children, isOpen, onClick }) =
 const Phase1 = () => (
   <div className="space-y-12 animate-in fade-in duration-500">
     <div>
-      <h2 className="text-3xl font-black text-slate-900 tracking-tight">Phase 1: Framing & Forensics</h2>
-      <p className="text-lg text-slate-500 mt-2">Defining the problem and auditing the evidence.</p>
+      <h2 className="text-3xl font-black text-slate-900 tracking-tight uppercase">Phase 1: Framing & Forensics</h2>
+      <p className="text-lg text-slate-500 mt-2 font-medium">Defining the problem and auditing the evidence.</p>
     </div>
 
-    {/* 1.1 Context & 1.4 Limitations */}
-    <div className="grid md:grid-cols-2 gap-8">
-      <Card className="p-8 border-l-8 border-l-blue-600 bg-white shadow-md">
-        <h3 className="text-2xl font-black text-slate-800 mb-4">1.1 Business Context</h3>
-        <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-          MyPick, a 30-year-old family business, seeks to transition to a data-driven organization.
-        </p>
-        <div className="space-y-4">
-          <h4 className="font-bold text-slate-400 uppercase text-xs tracking-widest">Research Objectives</h4>
-          <ul className="space-y-3 text-base text-slate-700 font-medium">
-            <li className="flex items-center gap-3"><Target className="w-6 h-6 text-blue-600"/> Maximize Sales Revenue</li>
-            <li className="flex items-center gap-3"><Map className="w-6 h-6 text-blue-600"/> Optimize Brand Positioning</li>
-            <li className="flex items-center gap-3"><Store className="w-6 h-6 text-blue-600"/> Optimize Store Strategy</li>
-            <li className="flex items-center gap-3"><TrendingUp className="w-6 h-6 text-blue-600"/> Optimize Promotion Mix</li>
-            <li className="flex items-center gap-3"><Users className="w-6 h-6 text-blue-600"/> Evaluate Market Segmentation</li>
-          </ul>
+    {/* 1.1 Business Context (Full Wide) */}
+    <Card className="overflow-hidden border-none shadow-xl bg-white group">
+      <div className="flex flex-col md:flex-row">
+        <div className="md:w-1/3 h-80 md:h-auto relative overflow-hidden">
+           <img 
+             src="https://images.unsplash.com/photo-1589187151003-074174a74a42?w=800&q=80" 
+             alt="Indian Pickles Context" 
+             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+           />
+           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent flex items-end p-8">
+              <div className="text-white">
+                <div className="flex items-center gap-2 mb-2">
+                  <Store className="w-5 h-5 text-yellow-400" />
+                  <span className="text-xs font-black uppercase tracking-widest text-yellow-400">Since 1996</span>
+                </div>
+                <h4 className="text-2xl font-black">Heritage Meets Data</h4>
+              </div>
+           </div>
         </div>
-      </Card>
+        <div className="flex-1 p-10 border-l-8 border-l-blue-600">
+          <div className="flex justify-between items-start mb-6">
+            <div>
+              <h3 className="text-3xl font-black text-slate-800 mb-2 tracking-tight">1.1 Business Context</h3>
+              <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                MyPick, a 30-year-old family legacy in pickles and condiments, is at a critical inflection point. 
+                The mandate: <span className="text-blue-600 font-bold">Transition from intuition-based to data-driven decision making.</span>
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <div className="flex gap-2">
+                {[1,2,3].map(i => (
+                  <div key={i} className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center">
+                    <img src={`https://images.unsplash.com/photo-1626132646529-5003375a9b12?w=100&q=80&sig=${i}`} className="w-8 h-8 rounded-full object-cover opacity-60" alt="spice" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-10">
+            <div className="space-y-4">
+              <h4 className="font-black text-slate-400 uppercase text-xs tracking-[0.2em]">Primary Objectives</h4>
+              <ul className="space-y-4">
+                {[
+                  { icon: <Target className="text-blue-600"/>, label: "Maximize Sales Revenue", desc: "Top-line growth optimization" },
+                  { icon: <Map className="text-emerald-600"/>, label: "Brand Positioning", desc: "Closing the gap to the 'Ideal' brand" },
+                  { icon: <Users className="text-purple-600"/>, label: "Market Segmentation", desc: "Unlocking hidden consumer clusters" }
+                ].map((obj, i) => (
+                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md">
+                    <div className="p-2 bg-white rounded-lg shadow-sm h-fit">{obj.icon}</div>
+                    <div>
+                      <div className="font-bold text-slate-800">{obj.label}</div>
+                      <div className="text-xs text-slate-500 font-medium">{obj.desc}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-black text-slate-400 uppercase text-xs tracking-[0.2em]">Operational Strategy</h4>
+              <ul className="space-y-4">
+                {[
+                  { icon: <Store className="text-orange-600"/>, label: "Location Optimization", desc: "Residential vs Commercial focus" },
+                  { icon: <TrendingUp className="text-blue-600"/>, label: "Promotion Efficiency", desc: "Discount vs Volume ROI Audit" }
+                ].map((obj, i) => (
+                  <li key={i} className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-md">
+                    <div className="p-2 bg-white rounded-lg shadow-sm h-fit">{obj.icon}</div>
+                    <div>
+                      <div className="font-bold text-slate-800">{obj.label}</div>
+                      <div className="text-xs text-slate-500 font-medium">{obj.desc}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Card>
 
-      <Card className="p-8 border-l-8 border-l-red-600 bg-red-50/30 shadow-md">
-        <h3 className="text-2xl font-black text-red-900 mb-2">1.4 Data Limitations</h3>
-        <p className="text-sm text-red-700/70 mb-6 font-bold uppercase tracking-tighter italic">"The Confession" - Proactively disclosed to the Judge</p>
-        <div className="space-y-6">
-          <div className="flex gap-4 items-start p-4 bg-white/50 rounded-xl border border-red-100">
-            <AlertTriangle className="w-10 h-10 text-red-600 shrink-0"/>
+    {/* 1.4 Data Limitations */}
+    <Card className="p-10 border-l-8 border-l-red-600 bg-red-50/20 shadow-xl relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-8 opacity-10">
+          <AlertTriangle className="w-48 h-48 text-red-600" />
+      </div>
+      <div className="relative z-10">
+        <h3 className="text-3xl font-black text-red-900 mb-8">1.4 Data Limitations</h3>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
+            <div className="p-3 bg-red-100 rounded-xl">
+              <Search className="w-8 h-8 text-red-600" />
+            </div>
             <div>
-              <h4 className="font-extrabold text-red-900">Missing Cost Structure</h4>
-              <p className="text-red-800 text-sm leading-relaxed">Maximizing <strong>Revenue</strong>, not Profit. Dataset lacks COGS and margin data.</p>
+              <h4 className="font-black text-red-900 text-lg">Snapshot Data constraints</h4>
+              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Cross-sectional data for 2023. Insights are powerful for the current state but lack longitudinal seasonality trends.</p>
             </div>
           </div>
-          <div className="flex gap-4 items-start p-4 bg-white/50 rounded-xl border border-red-100">
-            <Search className="w-10 h-10 text-red-600 shrink-0"/>
+          <div className="flex gap-6 items-start p-6 bg-white/80 rounded-2xl border-2 border-red-100 shadow-sm transition-transform hover:-translate-y-1">
+            <div className="p-3 bg-red-100 rounded-xl">
+              <BarChart2 className="w-8 h-8 text-red-600" />
+            </div>
             <div>
-              <h4 className="font-extrabold text-red-900">Snapshot in Time</h4>
-              <p className="text-red-800 text-sm leading-relaxed">Cross-sectional data for 2023. Cannot detect seasonality or long-term trends.</p>
+              <h4 className="font-black text-red-900 text-lg">Revenue-Focused Lens</h4>
+              <p className="text-slate-600 text-sm leading-relaxed mt-1 font-medium">Maximizing <strong>Revenue</strong>, not Margin. Current dataset excludes COGS, directing our focus to top-line performance.</p>
             </div>
           </div>
         </div>
-      </Card>
-    </div>
+      </div>
+    </Card>
 
     {/* 1.3 Hypotheses */}
     <Card className="p-10 border-l-8 border-l-indigo-600 bg-white shadow-xl">
