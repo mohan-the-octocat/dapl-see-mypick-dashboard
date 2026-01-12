@@ -131,15 +131,6 @@ const Phase1 = () => (
                 The mandate: <span className="text-blue-600 font-bold">Transition from intuition-based to data-driven decision making.</span>
               </p>
             </div>
-            <div className="hidden lg:block">
-              <div className="flex gap-2">
-                {[1,2,3].map(i => (
-                  <div key={i} className="w-12 h-12 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center">
-                    <img src={`https://images.unsplash.com/photo-1626132646529-5003375a9b12?w=100&q=80&sig=${i}`} className="w-8 h-8 rounded-full object-cover opacity-60" alt="spice" />
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 mt-10">
