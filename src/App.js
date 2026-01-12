@@ -20,7 +20,7 @@ import {
 
 // --- Configuration & Helpers ---
 // NOTE: Images must be in the public/assets folder
-const ASSET_PATH = process.env.PUBLIC_URL + '/assets'; 
+const ASSET_PATH = '/assets'; 
 
 // --- Image Zoom Context & Components ---
 const ImageContext = React.createContext({
