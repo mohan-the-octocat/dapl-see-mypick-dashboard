@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Promax Digital: MyPick Transformation Dashboard
 
+## 📌 Project Overview
+**Client:** MyPick Pvt. Ltd. (Pickles & Condiments Manufacturer)  
+**Consultant:** Promax Digital  
+**Objective:** Leverage data analytics to drive sales growth, optimize brand positioning, and refine store/promotion strategies for the upcoming fiscal year.
+
+This React application serves as the **interactive pitch deck** for Promax's proposal to MyPick. It transforms raw Excel analysis into an engaging, data-driven story, featuring interactive visualizations, a sales simulator, and clear strategic recommendations.
+
+## 💼 Problem Context
+MyPick, a 30-year-old family business, is transitioning to a data-driven organization. The Managing Director, Mr. Rao, has provided two key datasets to shortlist a consulting partner:
+1.  **Sales Data:** Annual sales from a sample of stores, including variables like Store Type (Commercial/Residential), Location (Provision/Multi-Product), and Promotion Spend (Discount vs. Volume).
+2.  **Brand Perception Data:** Consumer similarity ratings (Likert 1-7) comparing MyPick against 5 competitors (Priya, Ruchi, MDH, Mother's Recipe, Nolin's) and an "Ideal" brand.
+
+**Key Business Questions:**
+*   Which store types and locations yield the best performance?
+*   Which promotion strategy (Discount vs. Volume) delivers better ROI?
+*   How is MyPick perceived relative to competitors and the "Ideal" brand?
+*   Does the market have distinct customer segments?
+
+## 🚀 Application Phases
+The dashboard guides the client through a 5-phase narrative:
+1.  **Framing & Forensics (EDA):** Auditing the evidence, identifying data limitations, and establishing research hypotheses.
+2.  **Quantitative Ballistics (Modeling):** "Building the Legal Case" using OLS Regression (for Sales drivers) and Multi-Dimensional Scaling (MDS) (for Brand positioning).
+3.  **Strategic Interpretation:** Turning statistical coefficients into actionable business strategy (Segmentation & ROI).
+4.  **Conclusion:** The final verdict and roadmap for the next fiscal year.
+5.  **Interactive Simulator:** A real-time "What-If" analysis tool allowing the client to adjust Promotion Spend and Store Location to forecast Sales based on the regression model.
+
+## 🛠️ Tech Stack & Dependencies
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+*   **Core:** `react`, `react-dom`
+*   **Styling:** `tailwindcss` (Utility-first CSS)
+*   **Icons:** `lucide-react`
+*   **Visualization:** `recharts` (Charts), Custom SVG implementations
+*   **Analytics:** `@vercel/analytics` (Privacy-friendly simulation tracking)
+*   **Data Processing:** `xlsx` (Excel parsing)
 
-In the project directory, you can run:
+## 💻 Local Setup & Installation
 
-### `npm start`
+### Prerequisites
+*   Node.js (v14.0.0 or higher)
+*   npm (v6.0.0 or higher)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Steps
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd dapl-see-v1
+    ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+    *Note: If you encounter peer dependency issues, use `npm install --legacy-peer-deps`.*
 
-### `npm test`
+3.  **Run the development server:**
+    ```bash
+    npm start
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view the dashboard in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+    Builds the app for production to the `build` folder.
 
-### `npm run build`
+## 📁 Repository Structure
+```
+dapl-see-v1/
+├── docs/               # Analysis reports, raw data, and problem context
+├── scripts/            # Python/JS scripts used for EDA and Modeling
+├── public/
+│   └── assets/         # Generated plots and visualizations
+├── src/
+│   ├── App.js          # Main Application Logic & UI
+│   ├── index.js        # Entry point
+│   └── index.css       # Global styles (Tailwind imports)
+└── package.json        # Project manifest
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📊 Analytics Methodology
+*   **Sales Model:** OLS Regression with HC3 Robust Standard Errors (to handle heteroscedasticity).
+*   **Perceptual Map:** Non-Metric Multi-Dimensional Scaling (MDS) based on dissimilarity matrices.
+*   **Segmentation:** K-Means Clustering on respondent rating vectors.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Created for the MyPick Strategic Transformation Pitch.*
