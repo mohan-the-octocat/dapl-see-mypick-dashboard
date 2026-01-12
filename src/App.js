@@ -108,7 +108,7 @@ const Phase1 = () => (
       <div className="flex flex-col md:flex-row">
         <div className="md:w-1/3 h-80 md:h-auto relative overflow-hidden">
            <img 
-             src="https://images.unsplash.com/photo-1589187151003-074174a74a42?w=800&q=80" 
+             src={`${ASSET_PATH}/pickles-closeup.jpg`} 
              alt="Indian Pickles Context" 
              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
            />
